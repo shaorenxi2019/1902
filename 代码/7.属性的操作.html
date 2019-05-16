@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="myDiv">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+</div>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script>
+    //attr:传递一个参数  获取当前属性对应点属性值
+    //两个参数：s设置
+    console.log($("#myDiv").attr("id"));
+    $("#myDiv").attr("name","哈哈哈哈");
+
+    // $("input").attr("checked","checked");
+    //关于表单元素设置属性
+    //prop
+    $("input").prop("checked","checked");
+</script>
+</body>
+</html>

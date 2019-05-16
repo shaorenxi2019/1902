@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+
+            function A(){
+                this.name = "hahah";
+                this.age = 200;
+            }
+
+            A.prototype.getX = function(){
+
+            };
+
+            var a = new A;
+
+            //for in
+            $.each(a,function (index,item) {
+                console.log(index, item);
+            });
+
+
+            ////show();  hide(); toggle();
+            // $("input").eq(0).click(function () {
+            //     $("div").show("fast");
+            // });
+            //
+            // $("input").eq(1).click(function () {
+            //     $("div").hide(5000);
+            // });
+            //
+            // $("input").eq(2).click(function () {
+            //     $("div").toggle();
+            // });
+
+            //slideDown  slideUp  slideToggle();
+            //默认是有动画的  值normal
+            // $("input").eq(0).click(function () {
+            //     $("div").slideDown(3000);
+            // });
+            //
+            // $("input").eq(1).click(function () {
+            //     $("div").slideUp();
+            // });
+            //
+            // $("input").eq(2).click(function () {
+            //     $("div").slideToggle();
+            // });
+
+
+            //fadeIn/fadeOut/fadeToggle
+            $("input").eq(0).click(function () {
+                $("div").fadeIn(3000);
+            });
+
+            $("input").eq(1).click(function () {
+                $("div").fadeOut();
+            });
+
+            $("input").eq(2).click(function () {
+                $("div").fadeToggle();
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<input type="button" value="开始">
+<input type="button" value="结束">
+<input type="button" value="切换">
+<div style="width: 300px;height: 300px;background-color: red;display: none;"></div>
+</body>
+</html>

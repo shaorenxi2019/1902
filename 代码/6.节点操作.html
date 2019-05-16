@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <ul id="myUl">
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+    </ul>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        // var $div = $("<div>我是div</div>")
+        // $div.appendTo($("body"));
+        // $("body").prepend($div);
+
+        //把所有匹配的元素插入到另一个、指定的元素元素集合的后面。
+        // $("div").eq(0).insertAfter($("ul>li:eq(0)"));
+        // $("div").eq(1).insertBefore($("ul>li:eq(1)"));
+
+
+        //empty :清空内容
+        // $("#myUl").empty();
+        //remove：删除
+        // $("#myUl").remove();
+
+
+        //clone:克隆  参数不传递默认是false   不克隆事件
+        $("#myUl li").click(function () {
+            console.log(1111);
+        });
+
+        //clone:参数为true克隆事件
+        var $copyLis = $("#myUl li").clone(true);
+        $("body").append($copyLis)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+    	<script src="../node_modules/jquery/dist/jquery.js"></script>
+    	<script>
+    		//each:
+    		//参数：匿名函数   idnex:索引   item:当前项
+    		
+    		//1.原型上遍历
+    		$.each([1,2,3,4,5],function(index,item){
+    			console.log(index,item);
+    		});
+    		
+    		
+    		//2.实例的遍历
+    		$("div").each(function(index,item){
+    			console.log(index,item);
+    		});
+    		
+    		//3.隐式迭代
+    		//内置实现循环遍历，隐藏细节
+    		
+    	</script>
+	</body>
+</html>

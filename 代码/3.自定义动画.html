@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            // $("div").css("top","200px");
+           $("input").click(function () {
+               //animate:自定义动画
+               //{要改变得样式}，时间  运动方式  回调函数(动画完成要做的事情)
+               //参数可以传递可以不传递
+                $("#box").animate({left:600},3000,"swing",function () {
+                    $("#box").animate({top:400},function () {
+                            $("#box").css("backgroundColor","green");
+                    });
+                })
+           });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="开始">
+    <div id="box"></div>
+</body>
+</html>
